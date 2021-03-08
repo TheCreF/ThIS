@@ -3,10 +3,19 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:local="clr-namespace:ThISDesktopUI.Views"
         mc:Ignorable="d"
-        Title="ShellView" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Th.I.S. Theater Information System" Height="450" Width="800" WindowStartupLocation="CenterScreen" Icon="icons8-application-window-48.png">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top" FontSize="16">
+            <MenuItem Header="_File" />
+            <MenuItem Header="_Account">
+                <MenuItem x:Name="LoginScreen" Header="_Login"/>
+            </MenuItem>
+        </Menu>
+        <Grid>
+            <ContentControl x:Name="ActiveItem" Margin="10"/>
+        </Grid>
+    </DockPanel>
 </Window>
