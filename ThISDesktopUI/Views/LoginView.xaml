@@ -6,7 +6,7 @@
              xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
              xmlns:local="clr-namespace:ThISDesktopUI.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="380">
+             d:DesignHeight="825" d:DesignWidth="1600">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -38,50 +38,52 @@
         <StackPanel Grid.Row="1">
             <StackPanel Orientation="Horizontal">
                 <TextBox
-                           Text="Username"
+                           x:Name="userName"
+                           Text="Nome Utente"
                            FontSize="20"
                            Foreground="White"
                            Background="Transparent"
                            BorderThickness="0"
-                           Width="235"
+                           Width="333"
                            HorizontalContentAlignment="Left"
                            Opacity="0.5"
                            Height="25"
-                           Margin="63,0,0,0"/>
+                           Margin="625,0,0,0"/>
                 <iconPacks:PackIconMaterial Kind="Account" 
                                                 VerticalAlignment="Center" 
                                                 HorizontalAlignment="Center" 
                                                 Foreground="White"/>
             </StackPanel>
-            <Border Width="250"
+            <Border Width="350"
                         Height="2"
                         Background="White"
                         Opacity="0.5"/>
 
             <StackPanel Orientation="Horizontal" Margin="0 30 0 0">
                 <PasswordBox
+                           x:Name="password"
                            Password="Password"
                            FontSize="20"
                            Foreground="White"
                            Background="Transparent"
                            BorderThickness="0"
-                           Width="235"
+                           Width="333"
                            HorizontalContentAlignment="Left"
                            Opacity="0.5"
                            Height="25"
-                           Margin="63,0,0,0"/>
+                           Margin="625,0,0,0"/>
                 <iconPacks:PackIconMaterial Kind="FormTextboxPassword" 
                                                 VerticalAlignment="Center" 
                                                 HorizontalAlignment="Center" 
                                                 Foreground="White"/>
             </StackPanel>
-            <Border Width="250"
+            <Border Width="350"
                         Height="2"
                         Background="White"
                         Opacity="0.5"/>
 
             <StackPanel Orientation="Horizontal" Margin="0,50,0,0">
-                <Button Width="100" Height="40" Content="LOGIN" Margin="65,0,53,0"/>
+                <Button Width="100" Height="40" Content="LOGIN" Margin="625,0,153,0"/>
                 <Button Width="100" Height="40" Content="REGISTER"/>
             </StackPanel>
 
