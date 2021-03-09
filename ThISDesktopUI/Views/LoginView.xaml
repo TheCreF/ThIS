@@ -6,10 +6,85 @@
              xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
              xmlns:local="clr-namespace:ThISDesktopUI.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="380">
     <Grid>
-        <iconPacks:PackIconMaterial Kind="Application" Foreground="White" Width="200" Height="200"
-                                 VerticalAlignment="Center"
-                                 HorizontalAlignment="Center" />
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Border CornerRadius="10" Grid.RowSpan="2">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <!--<GradientStop Color="#7be9f6" Offset="0.0"/>-->
+                    <!--<GradientStop Color="DeepSkyBlue" Offset="0.5"/>-->
+                    <GradientStop Color="#0089ce" Offset="0.0"/>
+                    <GradientStop Color="#FF83F083" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <StackPanel VerticalAlignment="Center">
+            <Image Source="/Images/spotlight-illumination-bright-light-stage-podium-vector-transparent.jpg" Width="80"/>
+            <TextBlock Text="Theater Information System"
+                           FontWeight="Light"
+                           FontFamily="Broadway"
+                           FontSize="22"
+                           Foreground="White"
+                           HorizontalAlignment="Center"
+                           Margin="0,20,0,0"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1">
+            <StackPanel Orientation="Horizontal">
+                <TextBox
+                           Text="Username"
+                           FontSize="20"
+                           Foreground="White"
+                           Background="Transparent"
+                           BorderThickness="0"
+                           Width="235"
+                           HorizontalContentAlignment="Left"
+                           Opacity="0.5"
+                           Height="25"
+                           Margin="63,0,0,0"/>
+                <iconPacks:PackIconMaterial Kind="Account" 
+                                                VerticalAlignment="Center" 
+                                                HorizontalAlignment="Center" 
+                                                Foreground="White"/>
+            </StackPanel>
+            <Border Width="250"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.5"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0 30 0 0">
+                <PasswordBox
+                           Password="Password"
+                           FontSize="20"
+                           Foreground="White"
+                           Background="Transparent"
+                           BorderThickness="0"
+                           Width="235"
+                           HorizontalContentAlignment="Left"
+                           Opacity="0.5"
+                           Height="25"
+                           Margin="63,0,0,0"/>
+                <iconPacks:PackIconMaterial Kind="FormTextboxPassword" 
+                                                VerticalAlignment="Center" 
+                                                HorizontalAlignment="Center" 
+                                                Foreground="White"/>
+            </StackPanel>
+            <Border Width="250"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.5"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,50,0,0">
+                <Button Width="100" Height="40" Content="LOGIN" Margin="65,0,53,0"/>
+                <Button Width="100" Height="40" Content="REGISTER"/>
+            </StackPanel>
+
+        </StackPanel>
     </Grid>
 </UserControl>

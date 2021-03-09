@@ -6,16 +6,31 @@
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:local="clr-namespace:ThISDesktopUI.Views"
         mc:Ignorable="d"
-        Title="Th.I.S. Theater Information System" Height="450" Width="800" WindowStartupLocation="CenterScreen" Icon="icons8-application-window-48.png">
-    <DockPanel>
-        <Menu DockPanel.Dock="Top" FontSize="16">
-            <MenuItem Header="_File" />
-            <MenuItem Header="_Account">
-                <MenuItem x:Name="LoginScreen" Header="_Login"/>
-            </MenuItem>
-        </Menu>
-        <Grid>
-            <ContentControl x:Name="ActiveItem" Margin="10"/>
-        </Grid>
-    </DockPanel>
+        AllowsTransparency="True" Background="Transparent" WindowStyle="None" ResizeMode="NoResize" 
+        Title="Th.I.S. Theater Information System" Height="450" Width="800" WindowStartupLocation="CenterScreen" Icon="/Images/icons8-application-window-48.png"
+        MouseDown="Window_MouseDown">
+    <Border CornerRadius="20">
+        <Border.Background>
+            <LinearGradientBrush>
+                <!--<GradientStop Color="#7be9f6" Offset="0.0"/>-->
+                <!--<GradientStop Color="DeepSkyBlue" Offset="0.5"/>-->
+                <GradientStop Color="#0089ce" Offset="0.0"/>
+                <GradientStop Color="#FF83F083" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.Background>
+
+        <DockPanel>
+            <!--<Menu DockPanel.Dock="Top" FontSize="16">
+                <MenuItem Header="_File" />
+                <MenuItem Header="_Account">
+                    <MenuItem x:Name="LoginScreen" Header="_Login"/>
+                </MenuItem>
+            </Menu>-->
+            <Grid>
+                <ContentControl x:Name="ActiveItem" Margin="10">
+
+                </ContentControl>
+            </Grid>
+        </DockPanel>
+    </Border>
 </Window>

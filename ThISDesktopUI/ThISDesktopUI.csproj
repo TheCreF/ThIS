@@ -173,6 +173,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ModernButtonTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\LoginView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -200,6 +204,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Resource Include="Fonts\dosis.bold.ttf" />
+    <Resource Include="Fonts\dosis.book.ttf" />
+    <Resource Include="Fonts\dosis.extrabold.ttf" />
+    <Resource Include="Fonts\dosis.extralight.ttf" />
+    <Resource Include="Fonts\dosis.light.ttf" />
+    <Resource Include="Fonts\dosis.medium.ttf" />
+    <Resource Include="Fonts\dosis.semibold.ttf" />
+    <None Include="Images\Thumbs.db" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -210,12 +222,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Fonts\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\icons8-application-window-48.png" />
     <Resource Include="Images\icons8-application-window-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\spotlight-illumination-bright-light-stage-podium-vector-transparent.jpg" />
+    <Resource Include="Images\stage-spotlight-illumination-theatre-light 01.jpg" />
+    <Resource Include="Images\stage-spotlight-illumination-theatre-light.jpg" />
+    <Resource Include="Images\ticket-icon-png-18.jpg" />
+    <Resource Include="Images\Tickets01.png" />
+    <Resource Include="Images\Tickets02.png" />
+    <Resource Include="Images\Tickets03.png" />
+    <Resource Include="Images\TIckets04.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
