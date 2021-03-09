@@ -210,14 +210,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Fonts\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\icons8-application-window-48.png" />
     <Resource Include="Images\icons8-application-window-80.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Views\icons8-application-window-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
