@@ -29,7 +29,7 @@
             <TextBlock Text="Theater Information System"
                            FontWeight="Light"
                            FontFamily="Broadway"
-                           FontSize="22"
+                           FontSize="42"
                            Foreground="White"
                            HorizontalAlignment="Center"
                            Margin="0,20,0,0"/>
@@ -37,54 +37,56 @@
 
         <StackPanel Grid.Row="1">
             <StackPanel Orientation="Horizontal">
+                <TextBlock Foreground="White" Background="Transparent" FontSize="20" Text="Nome Utente:" Opacity="0.5"
+                           Margin="555,0,20,0"/>
                 <TextBox
-                           x:Name="userName"
-                           Text="Nome Utente"
+                           x:Name="UserName"
                            FontSize="20"
                            Foreground="White"
-                           Background="Transparent"
+                           Background="#CC0089CE"
+                           Opacity="0.2"
                            BorderThickness="0"
-                           Width="333"
+                           Width="318"
                            HorizontalContentAlignment="Left"
-                           Opacity="0.5"
                            Height="25"
-                           Margin="625,0,0,0"/>
+                           Margin="10 0 5 0"/>
                 <iconPacks:PackIconMaterial Kind="Account" 
                                                 VerticalAlignment="Center" 
                                                 HorizontalAlignment="Center" 
                                                 Foreground="White"/>
             </StackPanel>
-            <Border Width="350"
+            <Border Width="500"
                         Height="2"
                         Background="White"
                         Opacity="0.5"/>
 
             <StackPanel Orientation="Horizontal" Margin="0 30 0 0">
+                <TextBlock Foreground="White" Background="Transparent" FontSize="20" Text="Password:" Opacity="0.5"
+                           Margin="555,0,55,0"/>
                 <PasswordBox
-                           x:Name="password"
-                           Password="Password"
+                           x:Name="Password"
                            FontSize="20"
                            Foreground="White"
-                           Background="Transparent"
+                           Background="#CC0089CE"
                            BorderThickness="0"
-                           Width="333"
+                           Width="318"
                            HorizontalContentAlignment="Left"
-                           Opacity="0.5"
+                           Opacity="0.2"
                            Height="25"
-                           Margin="625,0,0,0"/>
+                           Margin="10,0,5,0"/>
                 <iconPacks:PackIconMaterial Kind="FormTextboxPassword" 
                                                 VerticalAlignment="Center" 
                                                 HorizontalAlignment="Center" 
                                                 Foreground="White"/>
             </StackPanel>
-            <Border Width="350"
+            <Border Width="500"
                         Height="2"
                         Background="White"
                         Opacity="0.5"/>
 
             <StackPanel Orientation="Horizontal" Margin="0,50,0,0">
-                <Button Width="100" Height="40" Content="LOGIN" Margin="625,0,153,0"/>
-                <Button Width="100" Height="40" Content="REGISTER"/>
+                <Button x:Name="LogIn" Width="100" Height="40" Content="LOGIN" Margin="750,0,153,0"/>
+                <Button Width="100" Height="40" Content="REGISTER" Visibility="Collapsed"/>
             </StackPanel>
 
         </StackPanel>
