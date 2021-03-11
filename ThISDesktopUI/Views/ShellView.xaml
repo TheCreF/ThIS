@@ -3,34 +3,89 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:local="clr-namespace:ThISDesktopUI.Views"
         mc:Ignorable="d"
-        AllowsTransparency="True" Background="Transparent" WindowStyle="None" ResizeMode="NoResize" 
-        Title="Th.I.S. Theater Information System" Height="850" Width="1600" WindowStartupLocation="CenterScreen" Icon="/Images/icons8-application-window-48.png"
-        MouseDown="Window_MouseDown">
-    <Border CornerRadius="20">
-        <Border.Background>
-            <LinearGradientBrush>
-                <!--<GradientStop Color="#7be9f6" Offset="0.0"/>-->
-                <!--<GradientStop Color="DeepSkyBlue" Offset="0.5"/>-->
-                <GradientStop Color="#0089ce" Offset="0.0"/>
-                <GradientStop Color="#FF83F083" Offset="1"/>
-            </LinearGradientBrush>
-        </Border.Background>
+        Title="ShellView" Height="900" Width="1600" WindowStyle="None" 
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize" MouseDown="Window_MouseDown"
+        Background="#181735">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
 
-        <DockPanel>
-            <!--<Menu DockPanel.Dock="Top" FontSize="16">
-                <MenuItem Header="_File" />
-                <MenuItem Header="_Account">
-                    <MenuItem x:Name="LoginScreen" Header="_Login"/>
-                </MenuItem>
-            </Menu>-->
-            <Grid>
-                <ContentControl x:Name="ActiveItem" Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
 
-                </ContentControl>
-            </Grid>
-        </DockPanel>
-    </Border>
+        <Grid Grid.Row="0" Grid.ColumnSpan="2" Background="#0F0F2D">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Th.I.S - Theater Information System"
+                       Foreground="LightGreen"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="3"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       FontFamily="Fonts/#dosis.book"
+                       FontSize="20"/>
+
+            <TextBlock Text="by AlgoritmiX"
+                       Foreground="White"
+                       Grid.Column="4"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       FontFamily="Fonts/#dosis.book"
+                       FontSize="18"/>
+
+            <StackPanel Orientation="Horizontal" Grid.Column="13" HorizontalAlignment="Right">
+                <Button x:Name="btnMinimize" Click="btnMinimize_Click">
+                    <Image Source="/Images/windows-minimize-icon-9.jpg"/>
+                </Button>
+
+                <Button x:Name="btnMaximize" Click="btnMaximize_Click" BorderThickness="0" Background="Transparent">
+                    <Image Source="/Images/maximizeIcon02.png"/>
+                </Button>
+
+                <Button x:Name="btnCloseApp" Click="btnCloseApp_Click">
+                    <Image Source="/Images/exit-icon-16x16-28.jpg"/>
+                </Button>
+            </StackPanel>
+
+        </Grid>
+
+        <StackPanel Grid.Row="1">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <Image Width="80" Height="80" Source="/Images/AlgoritmiXsmall01.png" HorizontalAlignment="Left"/>
+                <TextBlock Text="ALGORITMIX"
+                           Foreground="White"
+                           FontSize="20"
+                           FontWeight="Medium"
+                           VerticalAlignment="Center" FontFamily="Broadway"
+                           Margin="20 0 0 0"
+                           />
+            </StackPanel>
+            
+        </StackPanel>
+        <ContentControl Grid.Row="2" Grid.Column="0" x:Name="ActiveItem">
+
+        </ContentControl>
+    </Grid>
 </Window>
