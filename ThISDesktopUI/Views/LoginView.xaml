@@ -9,11 +9,12 @@
              d:DesignHeight="800" d:DesignWidth="700">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
 
-        <Border CornerRadius="10" Grid.RowSpan="2">
+        <Border CornerRadius="10" Grid.RowSpan="3">
             <Border.Background>
                 <LinearGradientBrush>
                     <!--<GradientStop Color="#7be9f6" Offset="0.0"/>-->
@@ -47,7 +48,9 @@
                            Margin="0,20,0,20"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="1">
+        <TextBlock Grid.Row="1" x:Name="ErrorMessage" TextAlignment="Center" Foreground="Red" FontFamily="Franklin Gothic Medium" FontSize="32" Margin="10" TextWrapping="Wrap"/>
+
+        <StackPanel Grid.Row="2">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <TextBlock Foreground="White" Background="Transparent" FontSize="20" Text="Nome Utente:" Opacity="0.5"/>
                 <TextBox
