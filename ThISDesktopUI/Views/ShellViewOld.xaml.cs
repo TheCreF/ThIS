@@ -17,9 +17,9 @@ namespace ThISDesktopUI.Views
     /// <summary>
     /// Logica di interazione per ShellView.xaml
     /// </summary>
-    public partial class ShellView : Window
+    public partial class ShellViewOld : Window
     {
-        public ShellView()
+        public ShellViewOld()
         {
             InitializeComponent();
         }
@@ -30,28 +30,6 @@ namespace ThISDesktopUI.Views
             {
                 DragMove();
             }
-        }
-
-        private void btnCloseApp_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnMaximize_Click(object sender, RoutedEventArgs e)
-        {
-            if (this.WindowState == WindowState.Maximized)
-            {
-                this.WindowState = WindowState.Normal;
-            }
-            else
-            {
-                this.WindowState = WindowState.Maximized;
-            }
-        }
-
-        private void btnMinimize_Click(object sender, RoutedEventArgs e)
-        {
-            this.WindowState = WindowState.Minimized;
         }
     }
 }
