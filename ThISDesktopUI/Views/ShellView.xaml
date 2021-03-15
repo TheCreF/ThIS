@@ -11,6 +11,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="25"/>
+            <RowDefinition Height="35"/>
             <RowDefinition Height="80"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
@@ -20,6 +21,7 @@
             <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
 
+        <!--  Row 0 of Main Grid - Is the form TitleBar with buttons to Minimize, Maximize and close the entire Application -->
         <Grid Grid.Row="0" Grid.ColumnSpan="2" Background="#0F0F2D">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -70,21 +72,37 @@
             </StackPanel>
 
         </Grid>
+        
+        <!-- Row 1 of Main Grid / Menu Item  -->
+        <Menu Grid.Row="1" Grid.ColumnSpan="2" Background="Transparent" Foreground="White" FontSize="22">
+            <MenuItem Header="_File"/>
+            <MenuItem Header="Impostazioni">
+                <MenuItem x:Name="LoginScreen" Header="_LogIn"/>
+                <MenuItem x:Name="SeasonScreen" Header="Stagioni"/>
+            </MenuItem>
+        </Menu>
 
-        <StackPanel Grid.Row="1">
+        <!-- Row 2 of the MainGrid / Developer Logo + Developer Company Name + Running Company Logo  -->
+        <StackPanel Grid.Row="2">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                <Image Width="80" Height="80" Source="/Images/AlgoritmiXsmall01.png" HorizontalAlignment="Left"/>
-                <TextBlock Text="ALGORITMIX"
-                           Foreground="White"
-                           FontSize="20"
-                           FontWeight="Medium"
-                           VerticalAlignment="Center" FontFamily="Broadway"
-                           Margin="20 0 0 0"
+                <Image Width="80" Height="80" Source="/Images/spotlight-illumination-bright-light-stage-podium-vector-transparent.jpg" HorizontalAlignment="Left" Margin="20 0 0 0"/>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Width="532">
+                    <Image Width="80" Height="80" Source="/Images/AlgoritmiXsmall01.png" HorizontalAlignment="Right" Margin=" 250 0 0 0 "/>
+                    <TextBlock Text="ALGORITMIX" 
+                               HorizontalAlignment="Right"
+                               Foreground="White"
+                               FontSize="20"
+                               FontWeight="Medium"
+                               VerticalAlignment="Center"
+                               FontFamily="Broadway"
+                               Margin="20 0 0 0"
                            />
+                </StackPanel>
             </StackPanel>
             
         </StackPanel>
-        <ContentControl Grid.Row="2" Grid.Column="0" x:Name="ActiveItem">
+        
+        <ContentControl Grid.Row="2" Grid.Column="0" x:Name="ActiveItem" Grid.ColumnSpan="1">
 
         </ContentControl>
     </Grid>

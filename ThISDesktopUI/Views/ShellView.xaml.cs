@@ -53,5 +53,10 @@ namespace ThISDesktopUI.Views
         {
             this.WindowState = WindowState.Minimized;
         }
+
+        public void ExpandContentContentControl() 
+        {
+            this.ActiveItem.SetValue(Grid.ColumnSpanProperty, 2);
+        }
     }
 }

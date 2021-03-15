@@ -14,6 +14,7 @@ namespace ThISDesktopUI.ViewModels
         public ShellViewModel(LoginViewModel loginVM)
         {
             _loginVM = loginVM;
+            
             ActivateItem(_loginVM);
         }
     }
