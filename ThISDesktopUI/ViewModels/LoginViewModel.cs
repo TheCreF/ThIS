@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ThISDesktopUI.Helpers;
+using ThISDesktopUI.Library.Api;
 
 namespace ThISDesktopUI.ViewModels
 {
@@ -74,6 +74,9 @@ namespace ThISDesktopUI.ViewModels
             {
                 ErrorMessage = "";
                 var result = await _apiHelper.Authenticate(UserName, Password);
+
+                //Capture more information about the user
+                await _apiHelper.GetLoggedInUserInfo(result.Access_token);
             }
             catch (Exception ex)
             {
