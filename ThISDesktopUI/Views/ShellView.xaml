@@ -75,10 +75,11 @@
         
         <!-- Row 1 of Main Grid / Menu Item  -->
         <Menu Grid.Row="1" Grid.ColumnSpan="2" Background="Transparent" Foreground="White" FontSize="22">
-            <MenuItem Header="_File"/>
-            <MenuItem Header="Impostazioni">
-                <MenuItem x:Name="LoginScreen" Header="_LogIn"/>
-                <MenuItem x:Name="SeasonScreen" Header="Stagioni"/>
+            <MenuItem Header="_File" Foreground="AntiqueWhite"/>
+            <MenuItem x:Name="Seasons" Header="_Stagioni" Foreground="LawnGreen"/>
+            <MenuItem Header="Impostazioni" Foreground="LightGoldenrodYellow" Background="#0F0F2D">
+                <MenuItem x:Name="LoginScreen" Header="_LogIn" Background="#0F0F2D"/>
+                <MenuItem x:Name="SeasonScreen" Header="Stagioni" Background="#0F0F2D"/>
             </MenuItem>
         </Menu>
 
@@ -102,7 +103,7 @@
             
         </StackPanel>
         
-        <ContentControl Grid.Row="2" Grid.Column="0" x:Name="ActiveItem" Grid.ColumnSpan="1">
+        <ContentControl Grid.Row="3" Grid.Column="0" x:Name="ActiveItem" Grid.ColumnSpan="1">
 
         </ContentControl>
     </Grid>
