@@ -14,5 +14,6 @@ namespace ThISDesktopUI.Library.Models
         public string LastName { get; set; }
         public string EmailAddress { get; set; }
         public DateTime CreateDate { get; set; }
+        public string UserAcr { get; set; }
     }
 }

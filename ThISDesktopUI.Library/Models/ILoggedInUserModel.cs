@@ -10,5 +10,6 @@ namespace ThISDesktopUI.Library.Models
         string Id { get; set; }
         string LastName { get; set; }
         string Token { get; set; }
+        public string UserAcr { get; set; }
     }
 }

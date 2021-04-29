@@ -75,6 +75,7 @@ namespace ThISDesktopUI.Library.Api
                     _loggedInUser.Id = result.Id;
                     _loggedInUser.LastName = result.LastName;
                     _loggedInUser.Token = token;
+                    _loggedInUser.UserAcr = result.UserAcr;
                 }
                 else
                 {

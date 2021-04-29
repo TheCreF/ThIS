@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ThISDesktopUI.EventModels;
 using ThISDesktopUI.Library.Api;
 
 namespace ThISDesktopUI.ViewModels
@@ -13,11 +14,13 @@ namespace ThISDesktopUI.ViewModels
         private string _userName;
         private string _password;
         private IAPIHelper _apiHelper;
+        private IEventAggregator _events;
         private string _errorMessage;
 
-        public LoginViewModel(IAPIHelper apiHelper)
+        public LoginViewModel(IAPIHelper apiHelper, IEventAggregator events)
         {
             _apiHelper = apiHelper;
+            _events = events;
         }
 
         public string UserName
@@ -77,6 +80,8 @@ namespace ThISDesktopUI.ViewModels
 
                 //Capture more information about the user
                 await _apiHelper.GetLoggedInUserInfo(result.Access_token);
+
+                _events.PublishOnUIThread(new LogOnEvent());
             }
             catch (Exception ex)
             {

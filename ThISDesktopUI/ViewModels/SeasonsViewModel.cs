@@ -15,13 +15,13 @@ namespace ThISDesktopUI.ViewModels
         private string _seasonFullName;
         private string _seasonShortName;
 
-        public BindingList<string> Seasons
+        public BindingList<string> SeasonsList
         {
             get { return _seasons; }
             set 
             { 
                 _seasons = value;
-                NotifyOfPropertyChange(() => Seasons);
+                NotifyOfPropertyChange(() => SeasonsList);
             }
         }
 
