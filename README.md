@@ -14,6 +14,6 @@ In addition, one of the most important issues for an Event Promoter is to have a
 
 SALES, by itself, doesn't provide these "marketing" information. You have to subscribe to another Ticketcorner application, that is as SALES rented for an annual fee. And the fee probably is not so cheap... For Small Event Companies is another cost to be added to the revenues.
 
-Luckily, SALES has a feature that allows to export in ".csv" format the information of all the Customers bought a ticket for a specific event. If you manage more than a single event, of different types along an entire Season could be a nightmare to gather all the information got at different timing for the current seanson (sales evolves, hopefully) or, after the end of the Subscription campaign, having anoverview of how the business evolved, also comparing with the past or more recent season or seasons
+Luckily, SALES has a feature that allows to export in ".csv" format the information of all the Customers bought a ticket for a specific event. If you manage more than a single event, of different types along an entire Season could be a nightmare to gather all the information got at different timing for the current Season (sales evolves, hopefully) or, after the end of the Subscription campaign, having an overview of how the business evolved, also comparing with the past or more recent season or seasons
 
 **_ThIS_**, would like to to be the *Low Cost* application to aggregate all data and generate a Marketing Dashboard
