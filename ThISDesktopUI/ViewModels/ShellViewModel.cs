@@ -10,20 +10,21 @@ namespace ThISDesktopUI.ViewModels
 {
     public class ShellViewModel : Conductor<object>, IHandle<LogOnEvent>
     {
-        private LoginViewModel _loginVM;
         private IEventAggregator _events;
         private SeasonsViewModel _seasonVM;
+        private SimpleContainer _container;
 
-        public ShellViewModel(LoginViewModel loginVM, IEventAggregator events, SeasonsViewModel seasonVM)
+        public ShellViewModel(IEventAggregator events, SeasonsViewModel seasonVM,
+            SimpleContainer container)
         {
             _events = events;
-            _loginVM = loginVM;
             _seasonVM = seasonVM;
+            _container = container;
 
             _events.Subscribe(this);
             
             
-            ActivateItem(_loginVM);
+            ActivateItem(_container.GetInstance<LoginViewModel>());
         }
 
         public void Handle(LogOnEvent message)

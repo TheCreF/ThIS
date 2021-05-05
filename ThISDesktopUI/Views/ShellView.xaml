@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="ShellView" Height="900" Width="1600" WindowStyle="None" 
         WindowStartupLocation="CenterScreen" ResizeMode="NoResize" MouseDown="Window_MouseDown"
-        Background="#181735">
+        Background="#FF92D3EC">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="25"/>
@@ -40,6 +40,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
+            <Image Width="33" Height="33" Source="/Images/spotlight-illumination-bright-light-stage-podium-vector-transparent.jpg" HorizontalAlignment="Left" Margin="10 0 0 0"/>
             <TextBlock Text="Th.I.S - Theater Information System"
                        Foreground="LightGreen"
                        Grid.Column="1"
@@ -72,21 +73,23 @@
             </StackPanel>
 
         </Grid>
-        
+
         <!-- Row 1 of Main Grid / Menu Item  -->
-        <Menu Grid.Row="1" Grid.ColumnSpan="2" Background="Transparent" Foreground="White" FontSize="22">
-            <MenuItem Header="_File" Foreground="AntiqueWhite"/>
-            <MenuItem x:Name="Seasons" Header="_Stagioni" Foreground="LawnGreen"/>
-            <MenuItem Header="Impostazioni" Foreground="LightGoldenrodYellow" Background="#0F0F2D">
-                <MenuItem x:Name="LoginScreen" Header="_LogIn" Background="#0F0F2D"/>
-                <MenuItem x:Name="SeasonScreen" Header="Stagioni" Background="#0F0F2D"/>
+        <Menu Grid.Row="1" Grid.ColumnSpan="3" Background="Transparent" Foreground="White" FontSize="22">
+            <MenuItem Header="_File" Foreground="Black" FontWeight="Bold"/>
+            <MenuItem x:Name="Seasons" Header="_Stagioni" Foreground="Blue" FontWeight="Bold"/>
+            <MenuItem Header="Impostazioni" Foreground="#FF890000" Background="#FF92D3EC" FontWeight="Bold">
+                <MenuItem x:Name="LoginScreen" Header="_LogIn" Background="#FF92D3EC"/>
+                <MenuItem x:Name="SeasonScreen" Header="Stagioni" Background="#FF92D3EC"/>
             </MenuItem>
+            <MenuItem x:Name="QuitApp" Header="_Esci"/>
         </Menu>
 
         <!-- Row 2 of the MainGrid / Developer Logo + Developer Company Name + Running Company Logo  -->
-        <StackPanel Grid.Row="2">
+        <StackPanel Grid.Row="1
+                    ">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                <Image Width="80" Height="80" Source="/Images/spotlight-illumination-bright-light-stage-podium-vector-transparent.jpg" HorizontalAlignment="Left" Margin="20 0 0 0"/>
+                <!--
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Width="532">
                     <Image Width="80" Height="80" Source="/Images/AlgoritmiXsmall01.png" HorizontalAlignment="Right" Margin=" 250 0 0 0 "/>
                     <TextBlock Text="ALGORITMIX" 
@@ -99,11 +102,12 @@
                                Margin="20 0 0 0"
                            />
                 </StackPanel>
+                -->
             </StackPanel>
-            
+
         </StackPanel>
-        
-        <ContentControl Grid.Row="3" Grid.Column="0" x:Name="ActiveItem" Grid.ColumnSpan="1">
+
+        <ContentControl Grid.Row="2" Grid.Column="0" x:Name="ActiveItem" Grid.ColumnSpan="2" Grid.RowSpan="2">
 
         </ContentControl>
     </Grid>

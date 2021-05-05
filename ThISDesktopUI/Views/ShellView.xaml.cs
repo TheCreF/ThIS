@@ -34,7 +34,8 @@ namespace ThISDesktopUI.Views
 
         private void btnCloseApp_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Application.Current.Shutdown();
+            //this.Close();
         }
 
         private void btnMaximize_Click(object sender, RoutedEventArgs e)
