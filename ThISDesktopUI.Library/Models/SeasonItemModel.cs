@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace ThISDesktopUI.Library.Models
 {
-    public class SeasonItem : ISeasonItem
+    public class SeasonItemModel : ISeasonItemModel
     {
-        public int ID { get; set; }
-        public string SeaasonFullName { get; set; }
+        public int Id { get; set; }
+        public string SeasonName { get; set; }
         public string SeasonShortName { get; set; }
-        public int OrderNumb { get; set; }
+        public int Order { get; set; }
+
+        public int? IsCurrent { get; set; }
     }
 }

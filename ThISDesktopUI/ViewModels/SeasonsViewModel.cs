@@ -5,17 +5,37 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ThISDesktopUI.Library.Api;
+using ThISDesktopUI.Library.Models;
 using ThISDesktopUI.Views;
 
 namespace ThISDesktopUI.ViewModels
 {
     public class SeasonsViewModel : Screen
     {
-        private BindingList<string> _seasons;
+        private ISeasonEndpoint _seasonendpoint;
+        private BindingList<SeasonItemModel> _seasons;
         private string _seasonFullName;
         private string _seasonShortName;
 
-        public BindingList<string> SeasonsList
+        public SeasonsViewModel(ISeasonEndpoint seasonEndpoint)
+        {
+            _seasonendpoint = seasonEndpoint;
+        }
+
+        protected override async void OnViewLoaded(object view)
+        {
+            base.OnViewLoaded(view);
+            await LoadSeasons();
+        }
+
+        private async Task LoadSeasons() 
+        {
+            var ListOfSeasons = await _seasonendpoint.GetAll();
+            SeasonsList = new BindingList<SeasonItemModel>(ListOfSeasons);
+        }
+
+        public BindingList<SeasonItemModel> SeasonsList
         {
             get { return _seasons; }
             set 

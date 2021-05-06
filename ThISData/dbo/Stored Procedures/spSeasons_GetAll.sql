@@ -3,7 +3,7 @@ AS
 BEGIN
  SET NOCOUNT ON;
 
- SELECT SeasonName, SeasonShortName, [Order]
+ SELECT Id, SeasonName, SeasonShortName, [Order], IsCurrent
  FROM dbo.Season
  ORDER BY [Order]
 END

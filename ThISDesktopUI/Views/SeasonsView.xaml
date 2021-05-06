@@ -40,7 +40,21 @@
             <TextBlock x:Name="ListHeader" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Text="Gestione Stagioni" TextAlignment="Center" VerticalAlignment="Center" Foreground="Black" FontSize="24" FontWeight="Bold"/>
 
             <!-- Riga 1 - Griglia e bottone "Imposta Corrente" -->
-            <DataGrid x:Name="SeasonsList" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="4" Margin="5" Foreground="White"/>
+            <DataGrid x:Name="SeasonsList" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="4" Margin="5" 
+                      Foreground="Black" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False"
+                      RowHeaderWidth="20" AutoGenerateColumns="False" HorizontalAlignment="Stretch">
+                <DataGrid.Columns>
+                    <DataGridTextColumn IsReadOnly="True" Header="ID Stagione" Binding="{Binding Path=Id, StringFormat={}{0:N2}}" Width="*">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style>
+                                <Setter Property="TextBlock.TextAlignment" Value="Right" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn IsReadOnly="True" Header="Stagione" Binding="{Binding Path=SeasonName}" Width="3*"/>
+                    <DataGridTextColumn IsReadOnly="True" Header="Abbreviato" Binding="{Binding Path=SeasonShortName}"  Width="2*"/>
+                </DataGrid.Columns>
+            </DataGrid>
             <Button x:Name="SetAsCurrent" Grid.Column="3" Grid.Row="1" Margin="5">
                 <StackPanel>
                     <TextBlock Text="Imposta la Stagione selezionata come Stagione corrente"  Foreground="Black" FontWeight="Bold" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center"/>

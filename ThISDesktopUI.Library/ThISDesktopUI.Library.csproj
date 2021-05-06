@@ -50,11 +50,13 @@
   <ItemGroup>
     <Compile Include="Api\APIHelper.cs" />
     <Compile Include="Api\IAPIHelper.cs" />
+    <Compile Include="Api\ISeasonEndpoint.cs" />
+    <Compile Include="Api\SeasonEndpoint.cs" />
     <Compile Include="Models\AuthenticatedUser.cs" />
     <Compile Include="Models\ILoggedInUserModel.cs" />
-    <Compile Include="Models\ISeasonItem.cs" />
+    <Compile Include="Models\ISeasonItemModel.cs" />
     <Compile Include="Models\LoggedInUserModel.cs" />
-    <Compile Include="Models\SeasonItem.cs" />
+    <Compile Include="Models\SeasonItemModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

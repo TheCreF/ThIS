@@ -3,5 +3,6 @@
 	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
     [SeasonName] NVARCHAR(50) NOT NULL, 
     [SeasonShortName] NVARCHAR(20) NOT NULL, 
-    [Order] SMALLINT NOT NULL
+    [Order] SMALLINT NOT NULL, 
+    [IsCurrent] INT NOT NULL DEFAULT 0
 )
