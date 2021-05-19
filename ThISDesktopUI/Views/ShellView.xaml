@@ -77,11 +77,11 @@
         <!-- Row 1 of Main Grid / Menu Item  -->
         <Menu Grid.Row="1" Grid.ColumnSpan="3" Background="Transparent" Foreground="White" FontSize="22">
             <MenuItem Header="_File" Foreground="Black" FontWeight="Bold"/>
-            <MenuItem x:Name="Seasons" Header="_Stagioni" Foreground="Blue" FontWeight="Bold"/>
-            <MenuItem Header="Impostazioni" Foreground="#FF890000" Background="#FF92D3EC" FontWeight="Bold">
-                <MenuItem x:Name="LoginScreen" Header="_LogIn" Background="#FF92D3EC"/>
-                <MenuItem x:Name="SeasonScreen" Header="Stagioni" Background="#FF92D3EC"/>
+            <MenuItem Header="Dashboard" Foreground="#FF890000" Background="#FF92D3EC" FontWeight="Bold">
+                <MenuItem x:Name="CurrentSeason" Header="Stagione _Corrente" Background="#FF92D3EC"/>
+                <MenuItem x:Name="OtherSeasons" Header="_AltreStagioni" Background="#FF92D3EC"/>
             </MenuItem>
+            <MenuItem x:Name="Seasons" Header="_Stagioni" Foreground="Blue" FontWeight="Bold"/>
             <MenuItem x:Name="QuitApp" Header="_Esci"/>
         </Menu>
 

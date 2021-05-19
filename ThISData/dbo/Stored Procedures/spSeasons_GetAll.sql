@@ -5,5 +5,5 @@ BEGIN
 
  SELECT Id, SeasonName, SeasonShortName, [Order], IsCurrent
  FROM dbo.Season
- ORDER BY [Order]
+ ORDER BY [Order] DESC
 END

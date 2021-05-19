@@ -14,7 +14,7 @@
                 <!--<GradientStop Color="#7be9f6" Offset="0.0"/>-->
                 <!--<GradientStop Color="DeepSkyBlue" Offset="0.5"/>-->
                 <GradientStop Color="#FF92D3EC" Offset="0.0"/>
-                <GradientStop Color="#FF2A24E8" Offset="1.05"/>
+                <GradientStop Color="#FF2A24E8" Offset="1.00"/>
                 <!--<GradientStop Color="#FF83F083" Offset="1"/>-->
             </LinearGradientBrush>
         </Border.Background>
@@ -111,6 +111,8 @@
                     <TextBlock Text="Annulla" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </Button>
             </StackPanel>
+            <Button x:Name="ShowStatisticDashboard" Content="Visualizza Dashboard Statistiche" Grid.Column="2" Grid.Row="2" Margin="4,5,6,5" Foreground="Black" FontWeight="Bold"/>
+            <Button x:Name="AddNewSeason_Copy" Content="Gestione Eventi per Stagione" Grid.Column="2" Grid.Row="3" Margin="4,5,6,5" Foreground="Black" FontWeight="Bold"/>
             <!-- Riga 9 - Colonne 1 e 2 -->
 
 

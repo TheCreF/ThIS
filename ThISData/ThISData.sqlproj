@@ -82,6 +82,8 @@
     <Build Include="dbo\Tables\TicketType.sql" />
     <Build Include="dbo\Stored Procedures\spUserLookup.sql" />
     <Build Include="dbo\Stored Procedures\spSeasons_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\spGetSubscriptionCountBySeasonID.sql" />
+    <Build Include="dbo\Stored Procedures\spTicketType_GetAllBySeasonID.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ThISData.refactorlog" />

@@ -31,5 +31,10 @@ namespace ThISDesktopUI.ViewModels
         {
             ActivateItem(_seasonVM);
         }
+
+        public void Handle(SeasonEvent message)
+        {
+            ActivateItem(_seasonVM);
+        }
     }
 }
